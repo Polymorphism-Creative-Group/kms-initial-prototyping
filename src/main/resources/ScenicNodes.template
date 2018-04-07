@@ -1,0 +1,137 @@
+/*
+ * Copyright 2018 Jonathan Chang, Chun-yien <ccy@xtrea.io>.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package io.xtrea.bot.ilya_bot.model;
+
+import io.xtrea.common.annotations.XtrElement;
+import io.xtrea.common.annotations.XtrElementType;
+import io.xtrea.common.model.OperableItem;
+import java.io.Serializable;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+import org.json.JSONObject;
+
+/**
+ *
+ * @author Jonathan Chang, Chun-yien <ccy@xtrea.io>
+ */
+public abstract class $ScenicNode
+        extends OperableItem implements Serializable {
+
+     private static final long serialVersionUID = 1L;
+
+     @XtrElement(type = XtrElementType.OPERABLE_ITEM)
+     private Scenario scenario;
+
+     /**
+      * Constructor.
+      *
+      * @param description
+      * @param article Main text feed for this Node.
+      */
+     public ScenicNode(String article, String description) {
+          super(description);
+          this.scenario = new Scenario(article);
+//        System.out.printf(this + " created.\n");
+     }
+
+     public ScenicNode(Element xml) {
+          super(xml);
+//        System.out.printf(this + " created.\n");
+     }
+
+     public ScenicNode() {
+     }
+
+     /**
+      * Get the value of scenario
+      *
+      * @return the value of scenario
+      */
+     public Scenario getScenario() {
+          return scenario;
+     }
+
+     /**
+      * Set the value of scenario
+      *
+      * @param scenario new value of scenario
+      */
+     public void setScenario(Scenario scenario) {
+          this.scenario = scenario;
+     }
+
+     public NodeType getType() {
+          return NodeType.valueOf(this.getClass().getSimpleName());
+     }
+
+     /**
+      * Abstract method for Game play to get the next ScenicNode. All classes
+      * extend ScenicNode has to implement this method.
+      *
+      * @param params
+      * @return The next ScenicNode.
+      */
+     public abstract ScenicNode play(JSONObject params);
+
+     public ScenicNode play() {
+          return play(null);
+     }
+
+     @Override
+     public void xmlImport() {
+          super.xmlImport();
+          Element xml_sc = this.getXml().element("Scenario");
+          if (xml_sc != null) {
+               this.scenario = new Scenario(xml_sc);
+          }
+     }
+
+     @Override
+     public JSONObject jsonExport() throws IllegalArgumentException, IllegalAccessException {
+          JSONObject retVal = super.jsonExport();
+          if (retVal.has("ScenicNode") && this.scenario != null) {
+               retVal.getJSONObject("ScenicNode")
+                       .put("Scenario", this.scenario.jsonExport().getJSONObject("Scenario"));
+          }
+          return retVal;
+     }
+
+     @Override
+     public String xmlExport(boolean isRoot) throws IllegalArgumentException, IllegalAccessException {
+//          System.out.println(scenario);
+          try {
+               Document doc = DocumentHelper.parseText(super.xmlExport(isRoot));
+               Element root = doc.getRootElement();
+               String node_type = root.getName();
+               root.setName("ScenicNode");
+               root.addElement("node_type").addText(node_type);
+               return (isRoot) ? doc.asXML() : root.asXML();
+          } catch (DocumentException ex) {
+               Logger.getLogger(ScenicNode.class.getName()).log(Level.SEVERE, null, ex);
+               return null;
+          }
+     }
+
+     @Override
+     public String toString() {
+          return String.format("%s[%s]", getType(), getId());
+     }
+
+}

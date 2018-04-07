@@ -1,0 +1,25 @@
+<Ibot id="$bot_id">
+     <scenic_nodes>
+          #foreach( $node in $scenic_nodes )
+          <ScenicNode id="$node.id">
+               <node_type>$node.node_type</node_type>
+               #if(!$node.node_type.startsWith("Nodelinker"))
+               <Scenario>
+                    <article>$node.article</article>
+                    <resources>
+                         #foreach( $resource in $node.resources )
+                         <resource>
+                              <key>$resource.key</key>
+                              <value>$resource.value</value>
+                         </resource>
+                         #end
+                    </resources>
+               </Scenario>
+               #end
+               #if($node.node_type=="Node_Successive")
+               <linked_node>$node.linked_node</linked_node>
+               #end
+          </ScenicNode>
+          #end
+     </scenic_nodes>
+</Ibot>
