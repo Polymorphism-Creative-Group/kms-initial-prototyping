@@ -1,16 +1,73 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://xtrea.io/ontology/2018/2/ilyabot/scenicnode#"
-         xml:base="http://xtrea.io/ontology/2018/2/ilyabot/scenicnode"
-         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-         xmlns:owl="http://www.w3.org/2002/07/owl#"
-         xmlns:xml="http://www.w3.org/XML/1998/namespace"
-         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-     <owl:Ontology rdf:about="http://xtrea.io/ontology/2018/2/ilyabot/scenicnode"/>
+<rdf:RDF xmlns="http://xtrea.io/ontology/2018/4/ilyabot#"
+     xml:base="http://xtrea.io/ontology/2018/4/ilyabot"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:dcam="http://purl.org/dc/dcam/"
+     xmlns:scnode="http://xtrea.io/ontology/2018/2/ilyabot/scenicnode#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ilyabot="http://xtrea.io/ontology/2018/4/ilyabot#">
+    <owl:Ontology rdf:about="http://xtrea.io/ontology/2018/4/ilyabot">
+        <owl:imports rdf:resource="http://dublincore.org/2012/06/14/dctype#Image"/>
+    </owl:Ontology>
     
 
 
-     <!-- 
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://xtrea.io/ontology/2018/4/ilyabot#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="http://xtrea.io/ontology/2018/4/ilyabot#hasComponent">
+        <owl:inverseOf rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#isComponentOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://xtrea.io/ontology/2018/4/ilyabot#hasInput -->
+
+    <owl:ObjectProperty rdf:about="http://xtrea.io/ontology/2018/4/ilyabot#hasInput"/>
+    
+
+
+    <!-- http://xtrea.io/ontology/2018/4/ilyabot#hasOutput -->
+
+    <owl:ObjectProperty rdf:about="http://xtrea.io/ontology/2018/4/ilyabot#hasOutput"/>
+    
+
+
+    <!-- http://xtrea.io/ontology/2018/4/ilyabot#isComponentOf -->
+
+    <owl:ObjectProperty rdf:about="http://xtrea.io/ontology/2018/4/ilyabot#isComponentOf"/>
+    
+
+
+    <!-- http://xtrea.io/ontology/2018/4/ilyabot#isMadeOf -->
+
+    <owl:ObjectProperty rdf:about="http://xtrea.io/ontology/2018/4/ilyabot#isMadeOf">
+        <owl:inverseOf rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#isPartOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://xtrea.io/ontology/2018/4/ilyabot#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://xtrea.io/ontology/2018/4/ilyabot#isPartOf"/>
+    
+
+
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -21,65 +78,296 @@
     
 
 
-     <!-- http://xtrea.io/ontology/2018/2/ilyabot/scenicnode#NodeLinker -->
+    <!-- http://purl.org/dc/dcmitype/Collection -->
 
-     <owl:Class rdf:about="http://xtrea.io/ontology/2018/2/ilyabot/scenicnode#NodeLinker">
-          <rdfs:subClassOf rdf:resource="http://xtrea.io/ontology/2018/2/ilyabot/scenicnode#ScenicNode"/>
-     </owl:Class>
+    <rdf:Description rdf:about="http://purl.org/dc/dcmitype/Collection">
+        <rdfs:subClassOf rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#dcmitype"/>
+    </rdf:Description>
     
 
 
-     <!-- http://xtrea.io/ontology/2018/2/ilyabot/scenicnode#NodeLinker_Quit -->
+    <!-- http://purl.org/dc/dcmitype/Dataset -->
 
-     <owl:Class rdf:about="http://xtrea.io/ontology/2018/2/ilyabot/scenicnode#NodeLinker_Quit">
-          <rdfs:subClassOf rdf:resource="http://xtrea.io/ontology/2018/2/ilyabot/scenicnode#NodeLinker"/>
-     </owl:Class>
+    <rdf:Description rdf:about="http://purl.org/dc/dcmitype/Dataset">
+        <rdfs:subClassOf rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#dcmitype"/>
+    </rdf:Description>
     
 
 
-     <!-- http://xtrea.io/ontology/2018/2/ilyabot/scenicnode#NodeLinker_Random -->
+    <!-- http://purl.org/dc/dcmitype/Event -->
 
-     <owl:Class rdf:about="http://xtrea.io/ontology/2018/2/ilyabot/scenicnode#NodeLinker_Random">
-          <rdfs:subClassOf rdf:resource="http://xtrea.io/ontology/2018/2/ilyabot/scenicnode#NodeLinker"/>
-     </owl:Class>
+    <rdf:Description rdf:about="http://purl.org/dc/dcmitype/Event">
+        <rdfs:subClassOf rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#dcmitype"/>
+    </rdf:Description>
     
 
 
-     <!-- http://xtrea.io/ontology/2018/2/ilyabot/scenicnode#Node_SelectReaction -->
+    <!-- http://purl.org/dc/dcmitype/Image -->
 
-     <owl:Class rdf:about="http://xtrea.io/ontology/2018/2/ilyabot/scenicnode#Node_SelectReaction">
-          <rdfs:subClassOf rdf:resource="http://xtrea.io/ontology/2018/2/ilyabot/scenicnode#ScenicNode"/>
-     </owl:Class>
+    <rdf:Description rdf:about="http://purl.org/dc/dcmitype/Image">
+        <rdfs:subClassOf rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#dcmitype"/>
+    </rdf:Description>
     
 
 
-     <!-- http://xtrea.io/ontology/2018/2/ilyabot/scenicnode#Node_Successive -->
+    <!-- http://purl.org/dc/dcmitype/InteractiveResource -->
 
-     <owl:Class rdf:about="http://xtrea.io/ontology/2018/2/ilyabot/scenicnode#Node_Successive">
-          <rdfs:subClassOf rdf:resource="http://xtrea.io/ontology/2018/2/ilyabot/scenicnode#ScenicNode"/>
-     </owl:Class>
+    <rdf:Description rdf:about="http://purl.org/dc/dcmitype/InteractiveResource">
+        <rdfs:subClassOf rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#dcmitype"/>
+    </rdf:Description>
     
 
 
-     <!-- http://xtrea.io/ontology/2018/2/ilyabot/scenicnode#Node_Terminal -->
+    <!-- http://purl.org/dc/dcmitype/PhysicalObject -->
 
-     <owl:Class rdf:about="http://xtrea.io/ontology/2018/2/ilyabot/scenicnode#Node_Terminal">
-          <rdfs:subClassOf rdf:resource="http://xtrea.io/ontology/2018/2/ilyabot/scenicnode#ScenicNode"/>
-     </owl:Class>
+    <rdf:Description rdf:about="http://purl.org/dc/dcmitype/PhysicalObject">
+        <rdfs:subClassOf rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#dcmitype"/>
+    </rdf:Description>
     
 
 
-     <!-- http://xtrea.io/ontology/2018/2/ilyabot/scenicnode#Node_TheEnd -->
+    <!-- http://purl.org/dc/dcmitype/Service -->
 
-     <owl:Class rdf:about="http://xtrea.io/ontology/2018/2/ilyabot/scenicnode#Node_TheEnd">
-          <rdfs:subClassOf rdf:resource="http://xtrea.io/ontology/2018/2/ilyabot/scenicnode#ScenicNode"/>
-     </owl:Class>
+    <rdf:Description rdf:about="http://purl.org/dc/dcmitype/Service">
+        <rdfs:subClassOf rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#dcmitype"/>
+    </rdf:Description>
     
 
 
-     <!-- http://xtrea.io/ontology/2018/2/ilyabot/scenicnode#ScenicNode -->
+    <!-- http://purl.org/dc/dcmitype/Software -->
 
-     <owl:Class rdf:about="http://xtrea.io/ontology/2018/2/ilyabot/scenicnode#ScenicNode"/>
+    <rdf:Description rdf:about="http://purl.org/dc/dcmitype/Software">
+        <rdfs:subClassOf rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#dcmitype"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/dcmitype/Sound -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/dcmitype/Sound">
+        <rdfs:subClassOf rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#dcmitype"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/dcmitype/StillImage -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/dcmitype/StillImage">
+        <owl:equivalentClass rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#Image"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/dcmitype/Text -->
+
+    <rdf:Description rdf:about="http://purl.org/dc/dcmitype/Text">
+        <rdfs:subClassOf rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#dcmitype"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://xtrea.io/ontology/2018/4/ilyabot#Article -->
+
+    <owl:Class rdf:about="http://xtrea.io/ontology/2018/4/ilyabot#Article">
+        <rdfs:subClassOf rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#ScenicNodeComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://xtrea.io/ontology/2018/4/ilyabot#GameMechanism -->
+
+    <owl:Class rdf:about="http://xtrea.io/ontology/2018/4/ilyabot#GameMechanism">
+        <rdfs:subClassOf rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#ScenicNodeComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#hasOutput"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#ScenicNode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://xtrea.io/ontology/2018/4/ilyabot#IlyaBot -->
+
+    <owl:Class rdf:about="http://xtrea.io/ontology/2018/4/ilyabot#IlyaBot">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#ScenicScript"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://xtrea.io/ontology/2018/4/ilyabot#Image -->
+
+    <owl:Class rdf:about="http://xtrea.io/ontology/2018/4/ilyabot#Image">
+        <rdfs:subClassOf rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://xtrea.io/ontology/2018/4/ilyabot#NodeLinker -->
+
+    <owl:Class rdf:about="http://xtrea.io/ontology/2018/4/ilyabot#NodeLinker">
+        <rdfs:subClassOf rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#ScenicNode"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#hasComponent"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#Scenario"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://xtrea.io/ontology/2018/4/ilyabot#NodeLinker_Quit -->
+
+    <owl:Class rdf:about="http://xtrea.io/ontology/2018/4/ilyabot#NodeLinker_Quit">
+        <rdfs:subClassOf rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#NodeLinker"/>
+    </owl:Class>
+    
+
+
+    <!-- http://xtrea.io/ontology/2018/4/ilyabot#NodeLinker_Random -->
+
+    <owl:Class rdf:about="http://xtrea.io/ontology/2018/4/ilyabot#NodeLinker_Random">
+        <rdfs:subClassOf rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#NodeLinker"/>
+    </owl:Class>
+    
+
+
+    <!-- http://xtrea.io/ontology/2018/4/ilyabot#Node_SelectReaction -->
+
+    <owl:Class rdf:about="http://xtrea.io/ontology/2018/4/ilyabot#Node_SelectReaction">
+        <rdfs:subClassOf rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#ScenicNode"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#hasComponent"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#Reaction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://xtrea.io/ontology/2018/4/ilyabot#Node_Successive -->
+
+    <owl:Class rdf:about="http://xtrea.io/ontology/2018/4/ilyabot#Node_Successive">
+        <rdfs:subClassOf rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#ScenicNode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://xtrea.io/ontology/2018/4/ilyabot#Node_Terminal -->
+
+    <owl:Class rdf:about="http://xtrea.io/ontology/2018/4/ilyabot#Node_Terminal">
+        <rdfs:subClassOf rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#ScenicNode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://xtrea.io/ontology/2018/4/ilyabot#Node_TheEnd -->
+
+    <owl:Class rdf:about="http://xtrea.io/ontology/2018/4/ilyabot#Node_TheEnd">
+        <rdfs:subClassOf rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#ScenicNode"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#hasComponent"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#Scenario"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://xtrea.io/ontology/2018/4/ilyabot#Reaction -->
+
+    <owl:Class rdf:about="http://xtrea.io/ontology/2018/4/ilyabot#Reaction">
+        <rdfs:subClassOf rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#ScenicNodeComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://xtrea.io/ontology/2018/4/ilyabot#Resource -->
+
+    <owl:Class rdf:about="http://xtrea.io/ontology/2018/4/ilyabot#Resource">
+        <rdfs:subClassOf rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#ScenicNodeComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://xtrea.io/ontology/2018/4/ilyabot#Scenario -->
+
+    <owl:Class rdf:about="http://xtrea.io/ontology/2018/4/ilyabot#Scenario">
+        <rdfs:subClassOf rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#ScenicNodeComponent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#Resource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#hasComponent"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#Article"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://xtrea.io/ontology/2018/4/ilyabot#ScenicNode -->
+
+    <owl:Class rdf:about="http://xtrea.io/ontology/2018/4/ilyabot#ScenicNode">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#hasComponent"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#GameMechanism"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#hasComponent"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#Scenario"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://xtrea.io/ontology/2018/4/ilyabot#ScenicNodeComponent -->
+
+    <owl:Class rdf:about="http://xtrea.io/ontology/2018/4/ilyabot#ScenicNodeComponent"/>
+    
+
+
+    <!-- http://xtrea.io/ontology/2018/4/ilyabot#ScenicScript -->
+
+    <owl:Class rdf:about="http://xtrea.io/ontology/2018/4/ilyabot#ScenicScript">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#isMadeOf"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://xtrea.io/ontology/2018/4/ilyabot#ScenicNode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://xtrea.io/ontology/2018/4/ilyabot#dcmitype -->
+
+    <owl:Class rdf:about="http://xtrea.io/ontology/2018/4/ilyabot#dcmitype"/>
 </rdf:RDF>
 
 

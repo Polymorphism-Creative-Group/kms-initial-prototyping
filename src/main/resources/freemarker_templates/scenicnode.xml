@@ -3,7 +3,8 @@
           <ScenicNode id="${node.id}">
                <node_type>${node.node_type}</node_type>
                <Scenario>
-                    <article>${node.scenario.article}!"ok"</article>
+                    <article>${node.scenario.article}</article>
+                    <#list
                </Scenario>
                <linked_node>${node.linked_node}</linked_node>
           </ScenicNode>

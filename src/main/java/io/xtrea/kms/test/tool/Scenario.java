@@ -5,6 +5,7 @@
  */
 package io.xtrea.kms.test.tool;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -14,13 +15,14 @@ import java.util.Map;
  */
 public class Scenario {
 
-     public Scenario(String article) {
-          this.article = article;
-     }
-
      private String article;
 
      private List<Map<String, String>> resources;
+
+     public Scenario(String article) {
+          this.article = article;
+          this.resources = new ArrayList<>();
+     }
 
      /**
       * Get the value of resources

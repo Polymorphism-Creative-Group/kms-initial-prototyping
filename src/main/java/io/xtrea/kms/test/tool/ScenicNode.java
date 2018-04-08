@@ -17,7 +17,7 @@ public class ScenicNode {
 
      private String linked_node;
 
-     public Scenario scenario;
+     private Scenario scenario;
 
      /**
       * Get the value of linked_node
@@ -60,7 +60,7 @@ public class ScenicNode {
       *
       * @return the value of scenario
       */
-     public Scenario getScenaio() {
+     public Scenario getScenario() {
           return scenario;
      }
 
