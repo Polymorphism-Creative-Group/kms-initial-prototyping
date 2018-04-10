@@ -1,12 +1,25 @@
-<Ibot id="${bot_id}">
+<Ibot id="${bot.id}">
      <scenic_nodes>
+          <#list bot.scenic_nodes as node>
           <ScenicNode id="${node.id}">
                <node_type>${node.node_type}</node_type>
-               <Scenario>
+               <Scenario id="${node.scenario.id}>
                     <article>${node.scenario.article}</article>
-                    <#list
+                    <resources>
+                    <#list node.scenario.resources as resource >
+                         <resource id="${resource.id}">
+                         <#list resource.resource as key, value>
+                              <key>${key}</key>
+                              <value>${value}</value>
+                         </#list>
+                         </resource>
+                    </#list>
+                    </resources>
                </Scenario>
+               <#if node.linked_node??>
                <linked_node>${node.linked_node}</linked_node>
+               </#if>
           </ScenicNode>
+          </#list>
      </scenic_nodes>
 </Ibot>
