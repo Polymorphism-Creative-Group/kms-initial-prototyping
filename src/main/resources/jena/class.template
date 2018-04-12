@@ -1,0 +1,7 @@
+public class ${class.name} {
+<#if class.properties??>
+     <#list class.properties as property>
+     ${property.type} ${property.name};
+     </#list>
+</#if>
+}

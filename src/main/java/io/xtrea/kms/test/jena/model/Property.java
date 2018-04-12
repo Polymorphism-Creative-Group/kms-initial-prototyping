@@ -13,15 +13,35 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.xtrea.kms.test.jena;
+package io.xtrea.kms.test.jena.model;
 
 /**
  *
  * @author Jonathan Chang, Chun-yien <ccy@musicapoetica.org>
  */
-public class Setting {
+public class Property {
 
-    public static final String uri = "http://xtrea.io/ontology/ilya_bot#";
-    public static final String uri2 = "http://xtrea.io/ontology/ScenicNode#";
+     private String type;
+     private String name;
 
+     public Property(String type, String name) {
+          this.type = type;
+          this.name = name;
+     }
+
+     public String getType() {
+          return type;
+     }
+
+     public void setType(String type) {
+          this.type = type;
+     }
+
+     public String getName() {
+          return name;
+     }
+
+     public void setName(String name) {
+          this.name = name;
+     }
 }

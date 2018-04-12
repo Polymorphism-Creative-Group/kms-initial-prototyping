@@ -33,86 +33,64 @@ import io.xtrea.kms.test.jena.model.ScenicNode;
  */
 public class Main {
 
-    public static void main(String[] args) {
-        // Initialization
-        Model model = ModelFactory.createDefaultModel();
-        model.setNsPrefix("iBot", uri);
+     public static void main(String[] args) {
+          // Initialization
+          Model model = ModelFactory.createDefaultModel();
+          model.setNsPrefix("iBot", uri);
 
-        /*
+          /*
         * IBot Vocabularies.
-         */
-        Property hasComponent = model.createProperty(uri + "hasComponent");
-        Property isComponentOf = model.createProperty(uri + "idComponentOf");
-        Property isMadeOf = model.createProperty(uri + "isMadeOf");
-        Property hasType = model.createProperty(uri + "hasType");
-        Property isTypeOf = model.createProperty(uri + "isTypeOf");
+           */
+          Property hasComponent = model.createProperty(uri + "hasComponent");
+          Property isComponentOf = model.createProperty(uri + "idComponentOf");
+          Property isMadeOf = model.createProperty(uri + "isMadeOf");
+          Property hasType = model.createProperty(uri + "hasType");
+          Property isTypeOf = model.createProperty(uri + "isTypeOf");
 
-        /**
-         * IBot Construction.
-         */
-        Resource IBot = model.createResource(uri + "IBot");
+          /**
+           * IBot Construction.
+           */
+          Resource IBot = model.createResource(uri + "IBot");
 
-        // ScenicScript
-        Resource ScenicScript = model.createResource(uri + "ScenicScript");
-        IBot.addProperty(hasComponent, ScenicScript);
+          // ScenicScript
+          Resource ScenicScript = model.createResource(uri + "ScenicScript");
+          IBot.addProperty(hasComponent, ScenicScript);
 
-        // ScenicNode
-        Resource ScenicNode = model.createResource(uri + "ScenicNode");
-        ScenicScript.addProperty(isMadeOf, ScenicNode);
-        // ScenicNode - Scenario
-        Resource Scenario = model.createResource(uri + "Scenario");
-        // ScenicNode - GameMechanism
-        Resource GameMechanism = model.createResource(uri + "GameMachanism");
+          // ScenicNode
+          Resource ScenicNode = model.createResource(uri + "ScenicNode");
+          ScenicScript.addProperty(isMadeOf, ScenicNode);
+          // ScenicNode - Scenario
+          Resource Scenario = model.createResource(uri + "Scenario");
+          // ScenicNode - GameMechanism
+          Resource GameMechanism = model.createResource(uri + "GameMachanism");
 
-        ScenicNode.addProperty(hasComponent, Scenario)
-                .addProperty(hasComponent, GameMechanism);
+          ScenicNode.addProperty(hasComponent, Scenario)
+                  .addProperty(hasComponent, GameMechanism);
 
-        /*
+          /*
          * Build NodeType
-         */
-        List<Resource> NodeType = new ArrayList<>();
-        Arrays.asList(new String[]{
-            "Node_Successive",
-            "Node_SelectReaction",
-            "Node_Terminal",
-            "NodeLinker"})
-                .forEach((node_name) -> {
-                    NodeType.add(model.createResource(uri + node_name));
-                });
-        NodeType.forEach((type) -> {
-            ScenicNode.addProperty(hasType, type);
-        });
-        RDFDatatype RDFNodeType = model.createTypedLiteral(
-                new ScenicNode()).getDatatype();
-        
-        System.out.println(RDFNodeType.toString());
-        model.getResource(uri + "NodeLinker")
-                .addProperty(hasType, "NodeLinker_Quit");
+           */
+          List<Resource> NodeType = new ArrayList<>();
+          Arrays.asList(new String[]{
+               "Node_Successive",
+               "Node_SelectReaction",
+               "Node_Terminal",
+               "NodeLinker"})
+                  .forEach((node_name) -> {
+                       NodeType.add(model.createResource(uri + node_name));
+                  });
+          NodeType.forEach((type) -> {
+               ScenicNode.addProperty(hasType, type);
+          });
+          RDFDatatype RDFNodeType = model.createTypedLiteral(
+                  new ScenicNode()).getDatatype();
 
-        model.write(System.out);
-        model.getResource(uri + "ScenicNode").listProperties()
-                .forEachRemaining(System.out::println);
-        /*
-        String personURI = "http://somewhere/JohnSmith";
-        String givenName = "John";
-        String familyName = "Smith";
-        String fullName = givenName + " " + familyName;
-        
-        // create an empty Model
-        Model model = ModelFactory.createDefaultModel();
+          System.out.println(RDFNodeType.toString());
+          model.getResource(uri + "NodeLinker")
+                  .addProperty(hasType, "NodeLinker_Quit");
 
-        // create the resource
-        //   and add the properties cascading style
-        Resource johnSmith
-                = model.createResource(personURI)
-                        .addProperty(VCARD.FN, fullName)
-                        .addProperty(VCARD.N,
-                                model.createResource()
-                                        .addProperty(VCARD.Given, givenName)
-                                        .addProperty(VCARD.Family, familyName));
-         */ //        model.write(System.out);
-        //        johnSmith.listProperties().toList().forEach((st) -> {
-        //            System.out.println(st.asTriple());
-        //        });
-    }
+          model.write(System.out);
+          model.getResource(uri + "ScenicNode").listProperties()
+                  .forEachRemaining(System.out::println);
+     }
 }
