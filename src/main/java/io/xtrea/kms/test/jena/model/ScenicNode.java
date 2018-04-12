@@ -25,7 +25,7 @@ import org.apache.jena.datatypes.BaseDatatype;
 public class ScenicNode extends BaseDatatype {
 
     public ScenicNode() {
-        super(Setting.uri + "ScenicNode");
+        super(Setting.uri_ilya_bot + "ScenicNode");
     }
 
 }

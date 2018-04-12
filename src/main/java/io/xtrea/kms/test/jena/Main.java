@@ -15,7 +15,6 @@
  */
 package io.xtrea.kms.test.jena;
 
-import static io.xtrea.kms.test.jena.Setting.uri;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -25,6 +24,7 @@ import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.Resource;
 import io.xtrea.kms.test.jena.model.ScenicNode;
+import static io.xtrea.kms.test.jena.Setting.uri_ilya_bot;
 
 /**
  * Examples from https://jena.apache.org/tutorials/rdf_api.html.
@@ -36,33 +36,33 @@ public class Main {
      public static void main(String[] args) {
           // Initialization
           Model model = ModelFactory.createDefaultModel();
-          model.setNsPrefix("iBot", uri);
+          model.setNsPrefix("iBot", uri_ilya_bot);
 
           /*
         * IBot Vocabularies.
            */
-          Property hasComponent = model.createProperty(uri + "hasComponent");
-          Property isComponentOf = model.createProperty(uri + "idComponentOf");
-          Property isMadeOf = model.createProperty(uri + "isMadeOf");
-          Property hasType = model.createProperty(uri + "hasType");
-          Property isTypeOf = model.createProperty(uri + "isTypeOf");
+          Property hasComponent = model.createProperty(uri_ilya_bot + "hasComponent");
+          Property isComponentOf = model.createProperty(uri_ilya_bot + "idComponentOf");
+          Property isMadeOf = model.createProperty(uri_ilya_bot + "isMadeOf");
+          Property hasType = model.createProperty(uri_ilya_bot + "hasType");
+          Property isTypeOf = model.createProperty(uri_ilya_bot + "isTypeOf");
 
           /**
            * IBot Construction.
            */
-          Resource IBot = model.createResource(uri + "IBot");
+          Resource IBot = model.createResource(uri_ilya_bot + "IBot");
 
           // ScenicScript
-          Resource ScenicScript = model.createResource(uri + "ScenicScript");
+          Resource ScenicScript = model.createResource(uri_ilya_bot + "ScenicScript");
           IBot.addProperty(hasComponent, ScenicScript);
 
           // ScenicNode
-          Resource ScenicNode = model.createResource(uri + "ScenicNode");
+          Resource ScenicNode = model.createResource(uri_ilya_bot + "ScenicNode");
           ScenicScript.addProperty(isMadeOf, ScenicNode);
           // ScenicNode - Scenario
-          Resource Scenario = model.createResource(uri + "Scenario");
+          Resource Scenario = model.createResource(uri_ilya_bot + "Scenario");
           // ScenicNode - GameMechanism
-          Resource GameMechanism = model.createResource(uri + "GameMachanism");
+          Resource GameMechanism = model.createResource(uri_ilya_bot + "GameMachanism");
 
           ScenicNode.addProperty(hasComponent, Scenario)
                   .addProperty(hasComponent, GameMechanism);
@@ -77,7 +77,7 @@ public class Main {
                "Node_Terminal",
                "NodeLinker"})
                   .forEach((node_name) -> {
-                       NodeType.add(model.createResource(uri + node_name));
+                       NodeType.add(model.createResource(uri_ilya_bot + node_name));
                   });
           NodeType.forEach((type) -> {
                ScenicNode.addProperty(hasType, type);
@@ -86,11 +86,11 @@ public class Main {
                   new ScenicNode()).getDatatype();
 
           System.out.println(RDFNodeType.toString());
-          model.getResource(uri + "NodeLinker")
+          model.getResource(uri_ilya_bot + "NodeLinker")
                   .addProperty(hasType, "NodeLinker_Quit");
 
           model.write(System.out);
-          model.getResource(uri + "ScenicNode").listProperties()
+          model.getResource(uri_ilya_bot + "ScenicNode").listProperties()
                   .forEachRemaining(System.out::println);
      }
 }

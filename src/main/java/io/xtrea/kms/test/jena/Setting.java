@@ -21,7 +21,7 @@ package io.xtrea.kms.test.jena;
  */
 public class Setting {
 
-    public static final String uri = "http://xtrea.io/ontology/ilya_bot#";
-    public static final String uri2 = "http://xtrea.io/ontology/ScenicNode#";
+    public static final String uri_ilya_bot = "http://xtrea.io/ontology/ilya_bot#";
+    public static final String uri_ScenicNode = "http://xtrea.io/ontology/ScenicNode#";
 
 }
