@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns:dcterms="http://purl.org/dc/terms/" xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
+     <res-meta>
+          <dc:title>IBot Ontology</dc:title>
+          <dc:creator>
+               <vcard:FN>Jonathan Chang</vcard:FN>
+               <vcard:EMAIL>ccy@musicapoetica.org.tw</vcard:EMAIL>
+               <vcard:ORG>
+                    <vcard:Orgname>Xtrea Company Limited</vcard:Orgname>
+               </vcard:ORG>
+          </dc:creator>
+          <dc:contributor>
+               <vcard:FN>Jonathan Chang</vcard:FN>
+               <vcard:EMAIL>ccy@musicapoetica.org.tw</vcard:EMAIL>
+               <vcard:ORG>
+                    <vcard:Orgname>Xtrea Company Limited</vcard:Orgname>
+               </vcard:ORG>
+          </dc:contributor>
+          <dcterms:rightsHolder>
+               <vcard:FN>Jonathan Chang</vcard:FN>
+               <vcard:EMAIL>ccy@musicapoetica.org.tw</vcard:EMAIL>
+               <vcard:ORG>
+                    <vcard:Orgname>Xtrea Company Limited</vcard:Orgname>
+               </vcard:ORG>
+          </dcterms:rightsHolder>
+          <dcterms:created>2018-04-12T04:52:23+08:00</dcterms:created>
+          <dcterms:modified>2018-04-12T04:52:23+08:00</dcterms:modified>
+          <dc:language>en</dc:language>
+          <dc:format>x-cmap/x-storable</dc:format>
+          <dc:publisher>FIHMC CmapTools 6.03</dc:publisher>
+          <dc:extent>6048 bytes</dc:extent>
+          <dc:source>cmap:1SCL7WXBC-GZ9DFR-1:1SCL7WZ84-VGKKGW-Z:1SCL7Y5Z0-G5X1BV-NS</dc:source>
+     </res-meta>
+     <map width="424" height="439">
+          <concept-list>
+               <concept id="1SCL8GG0X-7R21DW-DM9" label="Article"/>
+               <concept id="1SCL80689-6J99L2-W1" label="ScenicNode"/>
+               <concept id="1SCL8R069-SNCKFL-F21" label="ExternalFactor"/>
+               <concept id="1SCL7YHXH-YZ95Q7-PJ" label="IBot"/>
+               <concept id="1SCL8N57Y-H70FJ1-DYN" label="Next ScenicNode"/>
+               <concept id="1SCL8BZXK-2DYGRP-CKM" label="Scenario"/>
+               <concept id="1SCL8SHDN-103KJMX-F4L" label="Type"/>
+               <concept id="1SCL8HRR8-1W4WXTM-DP3" label="Resource"/>
+               <concept id="1SCL8L9FD-1VF455F-DW7" label="PlayRule"/>
+               <concept id="1SCL7Z4TV-11QYWN9-T4" label="ScenicScript"/>
+          </concept-list>
+          <linking-phrase-list>
+               <linking-phrase id="1SCL8R06B-1B4WN2T-F24" label="may have&#xa;1:0+"/>
+               <linking-phrase id="1SCL8N57Z-VQGSX6-DYR" label="decides&#xa;1:1"/>
+               <linking-phrase id="1SCL83QLZ-23KHVC0-14C" label="has&#xa;1:1"/>
+               <linking-phrase id="1SCL8BZXL-1RFR2ND-CKQ" label="has&#xa;1:1"/>
+               <linking-phrase id="1SCL8GG0Y-R9MN03-DMD" label="has&#xa;1:1"/>
+               <linking-phrase id="1SCL8SHDP-1XFFRT2-F4P" label="has"/>
+               <linking-phrase id="1SCL8068B-1GDGFXJ-W4" label="consists of&#xa;1:unlimited"/>
+               <linking-phrase id="1SCL8L9FF-R13QLY-DWB" label="has&#xa;1:1"/>
+               <linking-phrase id="1SCL8HRR9-P83XPT-DP6" label="has&#xa;1:unlimited"/>
+          </linking-phrase-list>
+          <connection-list>
+               <connection id="1SCL8R06C-1LCHG8W-F27" from-id="1SCL8L9FD-1VF455F-DW7" to-id="1SCL8R06B-1B4WN2T-F24"/>
+               <connection id="1SCL8HRRB-20K431Q-DPG" from-id="1SCL8HRR9-P83XPT-DP6" to-id="1SCL8HRR8-1W4WXTM-DP3"/>
+               <connection id="1SCL8SHDQ-1SBBNFJ-F4S" from-id="1SCL80689-6J99L2-W1" to-id="1SCL8SHDP-1XFFRT2-F4P"/>
+               <connection id="1SCL8N580-28QKG0Q-DZ1" from-id="1SCL8N57Z-VQGSX6-DYR" to-id="1SCL8N57Y-H70FJ1-DYN"/>
+               <connection id="1SCL8GG0Z-1GC2N9L-DMH" from-id="1SCL8BZXK-2DYGRP-CKM" to-id="1SCL8GG0Y-R9MN03-DMD"/>
+               <connection id="1SCL83QM1-1Z88Z3Z-14G" from-id="1SCL7YHXH-YZ95Q7-PJ" to-id="1SCL83QLZ-23KHVC0-14C"/>
+               <connection id="1SCL8BZXM-1BMSM02-CKT" from-id="1SCL80689-6J99L2-W1" to-id="1SCL8BZXL-1RFR2ND-CKQ"/>
+               <connection id="1SCL8R06D-1Z9PB17-F2D" from-id="1SCL8R06B-1B4WN2T-F24" to-id="1SCL8R069-SNCKFL-F21"/>
+               <connection id="1SCL8HRRB-20NRHVV-DP9" from-id="1SCL8BZXK-2DYGRP-CKM" to-id="1SCL8HRR9-P83XPT-DP6"/>
+               <connection id="1SCL8L9FG-ZQ3GB5-DWL" from-id="1SCL8L9FF-R13QLY-DWB" to-id="1SCL8L9FD-1VF455F-DW7"/>
+               <connection id="1SCL8068D-23SVZFS-WF" from-id="1SCL8068B-1GDGFXJ-W4" to-id="1SCL80689-6J99L2-W1"/>
+               <connection id="1SCL8L9FG-JZW5KF-DWF" from-id="1SCL80689-6J99L2-W1" to-id="1SCL8L9FF-R13QLY-DWB"/>
+               <connection id="1SCL8068C-1DBJCPY-W7" from-id="1SCL7Z4TV-11QYWN9-T4" to-id="1SCL8068B-1GDGFXJ-W4"/>
+               <connection id="1SCL8SHDQ-1BR73Y2-F4Y" from-id="1SCL8SHDP-1XFFRT2-F4P" to-id="1SCL8SHDN-103KJMX-F4L"/>
+               <connection id="1SCL8BZXM-1HQPXHL-CKZ" from-id="1SCL8BZXL-1RFR2ND-CKQ" to-id="1SCL8BZXK-2DYGRP-CKM"/>
+               <connection id="1SCL8GG0Z-1Y95KBV-DMP" from-id="1SCL8GG0Y-R9MN03-DMD" to-id="1SCL8GG0X-7R21DW-DM9"/>
+               <connection id="1SCL83QM1-1FX9Y28-14M" from-id="1SCL83QLZ-23KHVC0-14C" to-id="1SCL7Z4TV-11QYWN9-T4"/>
+               <connection id="1SCL8N57Z-1VFPF56-DYV" from-id="1SCL8L9FD-1VF455F-DW7" to-id="1SCL8N57Z-VQGSX6-DYR"/>
+          </connection-list>
+          <concept-appearance-list>
+               <concept-appearance id="1SCL8GG0X-7R21DW-DM9" x="147" y="449" width="54" height="25"/>
+               <concept-appearance id="1SCL80689-6J99L2-W1" x="280" y="244" width="86" height="25"/>
+               <concept-appearance id="1SCL8R069-SNCKFL-F21" x="393" y="449" width="103" height="25"/>
+               <concept-appearance id="1SCL7YHXH-YZ95Q7-PJ" x="281" y="39" width="59" height="28"/>
+               <concept-appearance id="1SCL8N57Y-H70FJ1-DYN" x="258" y="449" width="118" height="25"/>
+               <concept-appearance id="1SCL8BZXK-2DYGRP-CKM" x="104" y="347" width="68" height="25"/>
+               <concept-appearance id="1SCL8SHDN-103KJMX-F4L" x="407" y="347" width="45" height="27"/>
+               <concept-appearance id="1SCL8HRR8-1W4WXTM-DP3" x="59" y="449" width="71" height="25"/>
+               <concept-appearance id="1SCL8L9FD-1VF455F-DW7" x="326" y="347" width="67" height="28"/>
+               <concept-appearance id="1SCL7Z4TV-11QYWN9-T4" x="281" y="142" width="90" height="27" min-width="82" min-height="19"/>
+          </concept-appearance-list>
+          <linking-phrase-appearance-list>
+               <linking-phrase-appearance id="1SCL8R06B-1B4WN2T-F24" x="393" y="399" width="61" height="26"/>
+               <linking-phrase-appearance id="1SCL8N57Z-VQGSX6-DYR" x="258" y="399" width="47" height="26"/>
+               <linking-phrase-appearance id="1SCL83QLZ-23KHVC0-14C" x="281" y="91" width="23" height="26"/>
+               <linking-phrase-appearance id="1SCL8BZXL-1RFR2ND-CKQ" x="104" y="295" width="23" height="26"/>
+               <linking-phrase-appearance id="1SCL8GG0Y-R9MN03-DMD" x="147" y="399" width="23" height="26"/>
+               <linking-phrase-appearance id="1SCL8SHDP-1XFFRT2-F4P" x="407" y="295" width="23" height="11"/>
+               <linking-phrase-appearance id="1SCL8068B-1GDGFXJ-W4" x="280" y="194" width="71" height="26"/>
+               <linking-phrase-appearance id="1SCL8L9FF-R13QLY-DWB" x="326" y="295" width="23" height="26"/>
+               <linking-phrase-appearance id="1SCL8HRR9-P83XPT-DP6" x="59" y="399" width="71" height="26"/>
+          </linking-phrase-appearance-list>
+          <connection-appearance-list>
+               <connection-appearance id="1SCL8R06C-1LCHG8W-F27" from-pos="center" to-pos="center" type="straight" arrowhead="if-to-concept"/>
+               <connection-appearance id="1SCL8HRRB-20K431Q-DPG" from-pos="center" to-pos="center" type="straight" arrowhead="if-to-concept"/>
+               <connection-appearance id="1SCL8SHDQ-1SBBNFJ-F4S" from-pos="center" to-pos="center" type="straight" arrowhead="if-to-concept"/>
+               <connection-appearance id="1SCL8N580-28QKG0Q-DZ1" from-pos="center" to-pos="center" type="straight" arrowhead="if-to-concept"/>
+               <connection-appearance id="1SCL8GG0Z-1GC2N9L-DMH" from-pos="center" to-pos="center" type="straight" arrowhead="if-to-concept"/>
+               <connection-appearance id="1SCL83QM1-1Z88Z3Z-14G" from-pos="center" to-pos="center" type="straight" arrowhead="if-to-concept"/>
+               <connection-appearance id="1SCL8BZXM-1BMSM02-CKT" from-pos="center" to-pos="center" type="straight" arrowhead="if-to-concept"/>
+               <connection-appearance id="1SCL8R06D-1Z9PB17-F2D" from-pos="center" to-pos="center" type="straight" arrowhead="if-to-concept"/>
+               <connection-appearance id="1SCL8HRRB-20NRHVV-DP9" from-pos="center" to-pos="center" type="straight" arrowhead="if-to-concept"/>
+               <connection-appearance id="1SCL8L9FG-ZQ3GB5-DWL" from-pos="center" to-pos="center" type="straight" arrowhead="if-to-concept"/>
+               <connection-appearance id="1SCL8068D-23SVZFS-WF" from-pos="center" to-pos="center" type="straight" arrowhead="if-to-concept"/>
+               <connection-appearance id="1SCL8L9FG-JZW5KF-DWF" from-pos="center" to-pos="center" type="straight" arrowhead="if-to-concept"/>
+               <connection-appearance id="1SCL8068C-1DBJCPY-W7" from-pos="center" to-pos="center" type="straight" arrowhead="if-to-concept"/>
+               <connection-appearance id="1SCL8SHDQ-1BR73Y2-F4Y" from-pos="center" to-pos="center" type="straight" arrowhead="if-to-concept"/>
+               <connection-appearance id="1SCL8BZXM-1HQPXHL-CKZ" from-pos="center" to-pos="center" type="straight" arrowhead="if-to-concept"/>
+               <connection-appearance id="1SCL8GG0Z-1Y95KBV-DMP" from-pos="center" to-pos="center" type="straight" arrowhead="if-to-concept"/>
+               <connection-appearance id="1SCL83QM1-1FX9Y28-14M" from-pos="center" to-pos="top" type="straight" arrowhead="if-to-concept"/>
+               <connection-appearance id="1SCL8N57Z-1VFPF56-DYV" from-pos="center" to-pos="center" type="straight" arrowhead="if-to-concept"/>
+          </connection-appearance-list>
+          <style-sheet-list>
+               <style-sheet id="_Default_">
+                    <map-style background-color="255,255,255,0" image-style="full" image-top-left="0,0"/>
+                    <concept-style font-name="Verdana" font-size="12" font-style="plain" font-color="0,0,0,255" text-margin="4" background-color="237,244,246,255" background-image-style="full" border-color="0,0,0,255" border-style="solid" border-thickness="1"
+                                   border-shape="rounded-rectangle" border-shape-rrarc="15.0" text-alignment="center" shadow-color="none" min-width="-1" min-height="-1" max-width="-1.0" group-child-spacing="10" group-parent-spacing="10"/>
+                    <linking-phrase-style font-name="Verdana" font-size="12" font-style="plain" font-color="0,0,0,255" text-margin="1" background-color="0,0,255,0" background-image-style="full" border-color="0,0,0,0" border-style="solid" border-thickness="1"
+                                          border-shape="rectangle" border-shape-rrarc="15.0" text-alignment="center" shadow-color="none" min-width="-1" min-height="-1" max-width="-1.0" group-child-spacing="10" group-parent-spacing="10"/>
+                    <connection-style color="0,0,0,255" style="solid" thickness="1" type="straight" arrowhead="if-to-concept-and-slopes-up"/>
+                    <resource-style font-name="SanSerif" font-size="12" font-style="plain" font-color="0,0,0,255" background-color="192,192,192,255"/>
+               </style-sheet>
+               <style-sheet id="_LatestChanges_">
+                    <connection-style arrowhead="if-to-concept"/>
+               </style-sheet>
+          </style-sheet-list>
+          <extra-graphical-properties-list>
+               <properties-list id="1SCL7Y5Z0-G5X1BV-NS">
+                    <property key="StyleSheetGroup_0" value="//*@!#$%%^&amp;*()() No Grouped StyleSheets @"/>
+               </properties-list>
+          </extra-graphical-properties-list>
+     </map>
+</cmap>

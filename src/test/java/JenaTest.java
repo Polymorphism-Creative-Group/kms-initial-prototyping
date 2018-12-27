@@ -88,12 +88,12 @@ public class JenaTest {
           inf.listStatements().forEachRemaining(System.out::println);
 //          write(System.out);
           Selector s = new SimpleSelector(
-                  //                  model.createResource(ibot + "IlyaBot"),
+                  //                  model.createResource(ibot + "IBot"),
                   model.createProperty(ibot, "hasComponent"),
                   //                  null,
                   null,
                   //                  model.createProperty(rdfs, "subClassOf"),
-                  //                  model.createResource(ibot + "ilyabot")
+                  //                  model.createResource(ibot + "IBot")
                   //                  model.createResource(ibot + "ScenicScript")
                   (Object) null
           );
@@ -104,11 +104,11 @@ public class JenaTest {
      public void simpleSelector() {
           //Use of SimpleSelector
           Selector s = new SimpleSelector(
-                  //                  model.createResource(ibot + "IlyaBot"),
+                  //                  model.createResource(ibot + "IBot"),
                   null,
                   null,
                   //                  model.createProperty(rdfs, "subClassOf"),
-                  //                  model.createResource(ibot + "ilyabot")
+                  //                  model.createResource(ibot + "IBot")
                   //                  model.createProperty(ibot, "hasComponent")
                   model.createResource(ibot + "ScenicScript")
           //                  (Object) null

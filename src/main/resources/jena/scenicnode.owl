@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns:scnode="http://xtrea.io/ontology/2018/4/ScenicNode#"
-         xml:base="http://xtrea.io/ontology/2018/4/ScenicNode"
+<rdf:RDF xmlns:scnode="http://metacontext.tech/ontology/2018/4/ScenicNode#"
+         xml:base="http://metacontext.tech/ontology/2018/4/ScenicNode"
          xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:owl="http://www.w3.org/2002/07/owl#"
          xmlns:xml="http://www.w3.org/XML/1998/namespace"
-         xmlns="http://xtrea.io/ontology/2018/4/ScenicNode/1.0.0#"
+         xmlns="http://metacontext.tech/ontology/2018/4/ScenicNode/1.0.0#"
          xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-     <owl:Ontology rdf:about="http://xtrea.io/ontology/2018/4/ScenicNode">
-          <owl:versionIRI rdf:resource="http://xtrea.io/ontology/2018/4/ScenicNode/1.0.0"/>
+     <owl:Ontology rdf:about="http://metacontext.tech/ontology/2018/4/ScenicNode">
+          <owl:versionIRI rdf:resource="http://metacontext.tech/ontology/2018/4/ScenicNode/1.0.0"/>
      </owl:Ontology>
     
 
@@ -24,17 +24,17 @@
     
 
 
-     <!-- http://xtrea.io/ontology/2018/4/ScenicNode#hasComponent -->
+     <!-- http://metacontext.tech/ontology/2018/4/ScenicNode#hasComponent -->
 
-     <owl:ObjectProperty rdf:about="http://xtrea.io/ontology/2018/4/ScenicNode#hasComponent">
-          <owl:inverseOf rdf:resource="http://xtrea.io/ontology/2018/4/ScenicNode#isComponentOf"/>
+     <owl:ObjectProperty rdf:about="http://metacontext.tech/ontology/2018/4/ScenicNode#hasComponent">
+          <owl:inverseOf rdf:resource="http://metacontext.tech/ontology/2018/4/ScenicNode#isComponentOf"/>
      </owl:ObjectProperty>
     
 
 
-     <!-- http://xtrea.io/ontology/2018/4/ScenicNode#isComponentOf -->
+     <!-- http://metacontext.tech/ontology/2018/4/ScenicNode#isComponentOf -->
 
-     <owl:ObjectProperty rdf:about="http://xtrea.io/ontology/2018/4/ScenicNode#isComponentOf"/>
+     <owl:ObjectProperty rdf:about="http://metacontext.tech/ontology/2018/4/ScenicNode#isComponentOf"/>
     
 
 
@@ -49,46 +49,46 @@
     
 
 
-     <!-- http://xtrea.io/ontology/2018/4/ScenicNode#Article -->
+     <!-- http://metacontext.tech/ontology/2018/4/ScenicNode#Article -->
 
-     <owl:Class rdf:about="http://xtrea.io/ontology/2018/4/ScenicNode#Article"/>
+     <owl:Class rdf:about="http://metacontext.tech/ontology/2018/4/ScenicNode#Article"/>
     
 
 
-     <!-- http://xtrea.io/ontology/2018/4/ScenicNode#Resource -->
+     <!-- http://metacontext.tech/ontology/2018/4/ScenicNode#Resource -->
 
-     <owl:Class rdf:about="http://xtrea.io/ontology/2018/4/ScenicNode#Resource"/>
+     <owl:Class rdf:about="http://metacontext.tech/ontology/2018/4/ScenicNode#Resource"/>
     
 
 
-     <!-- http://xtrea.io/ontology/2018/4/ScenicNode#Scenario -->
+     <!-- http://metacontext.tech/ontology/2018/4/ScenicNode#Scenario -->
 
-     <owl:Class rdf:about="http://xtrea.io/ontology/2018/4/ScenicNode#Scenario">
+     <owl:Class rdf:about="http://metacontext.tech/ontology/2018/4/ScenicNode#Scenario">
           <rdfs:subClassOf>
                <owl:Restriction>
-                    <owl:onProperty rdf:resource="http://xtrea.io/ontology/2018/4/ScenicNode#hasComponent"/>
-                    <owl:someValuesFrom rdf:resource="http://xtrea.io/ontology/2018/4/ScenicNode#Resource"/>
+                    <owl:onProperty rdf:resource="http://metacontext.tech/ontology/2018/4/ScenicNode#hasComponent"/>
+                    <owl:someValuesFrom rdf:resource="http://metacontext.tech/ontology/2018/4/ScenicNode#Resource"/>
                </owl:Restriction>
           </rdfs:subClassOf>
           <rdfs:subClassOf>
                <owl:Restriction>
-                    <owl:onProperty rdf:resource="http://xtrea.io/ontology/2018/4/ScenicNode#hasComponent"/>
+                    <owl:onProperty rdf:resource="http://metacontext.tech/ontology/2018/4/ScenicNode#hasComponent"/>
                     <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                    <owl:onClass rdf:resource="http://xtrea.io/ontology/2018/4/ScenicNode#Article"/>
+                    <owl:onClass rdf:resource="http://metacontext.tech/ontology/2018/4/ScenicNode#Article"/>
                </owl:Restriction>
           </rdfs:subClassOf>
      </owl:Class>
     
 
 
-     <!-- http://xtrea.io/ontology/2018/4/ScenicNode#ScenicNode -->
+     <!-- http://metacontext.tech/ontology/2018/4/ScenicNode#ScenicNode -->
 
-     <owl:Class rdf:about="http://xtrea.io/ontology/2018/4/ScenicNode#ScenicNode">
+     <owl:Class rdf:about="http://metacontext.tech/ontology/2018/4/ScenicNode#ScenicNode">
           <rdfs:subClassOf>
                <owl:Restriction>
-                    <owl:onProperty rdf:resource="http://xtrea.io/ontology/2018/4/ScenicNode#hasComponent"/>
+                    <owl:onProperty rdf:resource="http://metacontext.tech/ontology/2018/4/ScenicNode#hasComponent"/>
                     <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                    <owl:onClass rdf:resource="http://xtrea.io/ontology/2018/4/ScenicNode#Scenario"/>
+                    <owl:onClass rdf:resource="http://metacontext.tech/ontology/2018/4/ScenicNode#Scenario"/>
                </owl:Restriction>
           </rdfs:subClassOf>
      </owl:Class>

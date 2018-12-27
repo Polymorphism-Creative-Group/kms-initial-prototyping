@@ -1,8 +1,8 @@
 
-import io.xtrea.kms.test.jena.model.XtreaOperableItem;
+import tech.metacontext.kms.test.jena.model.XtreaOperableItem;
 
 /*
- * Copyright 2018 Jonathan Chang, Chun-yien <ccy@xtrea.io>.
+ * Copyright 2018 Jonathan Chang, Chun-yien <ccy@musicapoetica.org.tw>.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@ import io.xtrea.kms.test.jena.model.XtreaOperableItem;
  */
 /**
  *
- * @author Jonathan Chang, Chun-yien <ccy@xtrea.io>
+ * @author Jonathan Chang, Chun-yien <ccy@musicapoetica.org.tw>
  */
 public abstract class $ScenicNode extends XtreaOperableItem {
 
