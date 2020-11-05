@@ -22,7 +22,6 @@ import java.time.ZoneId;
 import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
-import org.apache.jena.shared.uuid.UUID_V4;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -58,12 +57,9 @@ public class Tests {
     public void hello() {
         List<UUID> list = Arrays.asList(new UUID[]{
             Generators.timeBasedGenerator().generate(),
-            UUID_V4.generate().asUUID(),
+            UUID.randomUUID(),
             UUIDs.timeBased()
         });
-//        UUID uuid1 = Generators.timeBasedGenerator().generate();
-//        UUID uuid2 = UUID_V4.generate().asUUID();
-//        UUID uuid3 = UUIDs.timeBased();
         list.forEach((t) -> {
             System.out.println(t);
             LocalDateTime date
